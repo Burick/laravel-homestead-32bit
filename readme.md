@@ -5,17 +5,17 @@
 
 
 
-To get Laravel Homestead 32Bit:
+Get Laravel Homestead 32Bit:
 
 
 
+```
+git https://github.com/rmff/laravel-homestead-32bit.git Homestead32Bit
 
-`git https://github.com/rmff/laravel-homestead-32bit.git Homestead32Bit`
+cd Homestead32Bit
 
-`cd Homestead32Bit`
-
-`vagrant up`
-
+vagrant up
+```
 
 
 
