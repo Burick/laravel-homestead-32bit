@@ -14,6 +14,8 @@ git https://github.com/rmff/laravel-homestead-32bit.git Homestead32Bit
 
 cd Homestead32Bit
 
+bash init.sh  (for Windows: init.bat)
+
 vagrant up
 ```
 
