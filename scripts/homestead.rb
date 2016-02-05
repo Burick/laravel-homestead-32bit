@@ -13,8 +13,8 @@ class Homestead
     config.ssh.forward_agent = true
 
     # Configure The Box
-    config.vm.box = settings["box"] ||= "laravel/homestead"
-    config.vm.box_version = settings["version"] ||= ">= 0.4.0"
+    config.vm.box = settings["box"] ||= "rmff/homestead-32bit"
+    config.vm.box_version = settings["version"] ||= ">= 0.0.1"
     config.vm.hostname = settings["hostname"] ||= "homestead"
 
     # Configure A Private Network IP
@@ -29,28 +29,28 @@ class Homestead
 
     # Configure A Few VirtualBox Settings
     config.vm.provider "virtualbox" do |vb|
-      vb.name = settings["name"] ||= "homestead-7"
-      vb.customize ["modifyvm", :id, "--memory", settings["memory"] ||= "2048"]
+      vb.name = settings["name"] ||= "homestead-32Bit"
+      vb.customize ["modifyvm", :id, "--memory", settings["memory"] ||= "1048"]
       vb.customize ["modifyvm", :id, "--cpus", settings["cpus"] ||= "1"]
       vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
       vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-      vb.customize ["modifyvm", :id, "--ostype", "Ubuntu_64"]
+      vb.customize ["modifyvm", :id, "--ostype", "Ubuntu_32"]
     end
 
     # Configure A Few VMware Settings
     ["vmware_fusion", "vmware_workstation"].each do |vmware|
       config.vm.provider vmware do |v|
-        v.vmx["displayName"] = "homestead"
-        v.vmx["memsize"] = settings["memory"] ||= 2048
+        v.vmx["displayName"] = "homestead-32Bit"
+        v.vmx["memsize"] = settings["memory"] ||= 1024
         v.vmx["numvcpus"] = settings["cpus"] ||= 1
-        v.vmx["guestOS"] = "ubuntu-64"
+        v.vmx["guestOS"] = "ubuntu-32"
       end
     end
 
     # Configure A Few Parallels Settings
     config.vm.provider "parallels" do |v|
       v.update_guest_tools = true
-      v.memory = settings["memory"] ||= 2048
+      v.memory = settings["memory"] ||= 1024
       v.cpus = settings["cpus"] ||= 1
     end
 
