@@ -10,11 +10,11 @@ Get Laravel Homestead 32Bit:
 
 
 ```
-git https://github.com/rmff/laravel-homestead-32bit.git Homestead32Bit
+git clone https://github.com/rmff/laravel-homestead-32bit.git Homestead32Bit
 
 cd Homestead32Bit
 
-bash init.sh  (for Windows: init.bat)
+bash init.sh
 
 vagrant up
 ```
