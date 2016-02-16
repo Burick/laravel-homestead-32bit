@@ -31,7 +31,7 @@ Build with Laravel [settler](https://github.com/laravel/settler) (master - 2016-
 
 
 
-[rmff/laravel-homestead-32Bit](https://github.com/rmff/laravel-homestead-32bit) fork of [laravel/homestead](https://github.com/laravel/homestead) (master - 2015-02-05)
+[rmff/laravel-homestead-32Bit](https://github.com/rmff/laravel-homestead-32bit) fork of [laravel/homestead](https://github.com/laravel/homestead) (master - 2016-02-05)
 
 
 
